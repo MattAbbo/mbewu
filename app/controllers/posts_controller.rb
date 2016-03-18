@@ -27,6 +27,12 @@ class PostsController < ApplicationController
     redirect_to(post_path(@post))
   end
 
+  def destroy
+    @post = Post.find(params[:id])
+    @post.destroy(post_params)
+    redirect_to(post_path(@post))
+  end
+
   private
 
   # Use strong_parameters for attribute whitelisting

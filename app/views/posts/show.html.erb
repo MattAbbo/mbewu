@@ -12,7 +12,7 @@
       <%= @post.caption %>
     </p>
     <div class="text-center">
-      <%= link_to "Edit", edit_post_path(:id) %> |
+      <%= link_to "Edit", edit_post_path(@post.id) %> |
       <%= link_to "Back", posts_path %>
     </div>
   </div>
